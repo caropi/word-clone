@@ -3,13 +3,13 @@ import React from 'react';
 function GuessResults({ guessList }) {
   return (
     <section>
-      <ul className="guess-results">
+      <div className="guess-results">
         {guessList.map((guess) => (
-          <li className="guess" key={guess}>
+          <p className="guess" key={guess}>
             {guess}
-          </li>
+          </p>
         ))}
-      </ul>
+      </div>
     </section>
   );
 }
