@@ -1,11 +1,5 @@
 import React from 'react';
 
-//TODO
-/*
-When the form is submitted:
-NOTE: The minLength validator is a bit funky; you may wish to use the pattern attribute instead. This is discussed in more detail on the Solution page.
-*/
-
 function Form({ setGuess }) {
   const [inputText, setInputText] = React.useState('');
   const handleGuess = (event) => {
