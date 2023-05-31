@@ -1,11 +1,11 @@
 import React from 'react';
 
-function Form({ setGuess }) {
+function Form({ guessList, setGuess }) {
   const [inputText, setInputText] = React.useState('');
   const handleGuess = (event) => {
     event.preventDefault();
 
-    setGuess(inputText.toUpperCase());
+    setGuess([...guessList, inputText.toUpperCase()]);
     setInputText('');
   };
 

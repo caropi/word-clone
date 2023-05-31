@@ -16,14 +16,14 @@ const answer = sample(WORDS);
 console.info({ answer });
 
 function Game() {
-  const [guess, setGuess] = React.useState('');
-
-  console.log({ guess });
+  const [guessList, setGuess] = React.useState([]);
+  console.log({ guessList });
   return (
     <main>
       <section>
-        <GuessResults />
-        <Form setGuess={setGuess} />
+        {guessList.length > 0 && <GuessResults guessList={guessList} />}
+
+        <Form guessList={guessList} setGuess={setGuess} />
       </section>
     </main>
   );
