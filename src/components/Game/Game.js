@@ -3,6 +3,12 @@ import React from 'react';
 import { sample } from '../../utils';
 import { WORDS } from '../../data';
 import Form from '../Form/Form';
+import GuessResults from '../GuessResults/GuessResults';
+
+/**
+ * When the user submits their guess, that value should be rendered within this new component.
+ * There should be no key warnings in the console!
+ */
 
 // Pick a random word on every pageload.
 const answer = sample(WORDS);
@@ -16,6 +22,7 @@ function Game() {
   return (
     <main>
       <section>
+        <GuessResults />
         <Form setGuess={setGuess} />
       </section>
     </main>
