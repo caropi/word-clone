@@ -9,7 +9,8 @@ function Form({ guessList, setGuess }) {
       window.alert("You've reached the maximum number of guesses");
       return;
     }
-    setGuess([...guessList, inputText.toUpperCase()]);
+
+    setGuess([...guessList, { guess: inputText.toUpperCase().split(''), id: Math.random() }]);
     setInputText('');
   };
 

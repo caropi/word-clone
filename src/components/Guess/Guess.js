@@ -8,13 +8,11 @@ Use the NUM_OF_GUESSES_ALLOWED constant, when needed.
 No key warnings in the console.
  */
 
-function Guess({ guess }) {
-  const guessSlotArray = guess.split('');
-  console.log(guessSlotArray);
+function Guess({ guess, id }) {
   return (
     <p className="guess">
-      {guessSlotArray.map((letter) => (
-        <span className="cell" key={letter}>
+      {guess.map((letter, index) => (
+        <span className="cell" key={letter === '' ? index : `${letter}${index}`}>
           {letter}
         </span>
       ))}

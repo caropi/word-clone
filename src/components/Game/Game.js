@@ -16,7 +16,7 @@ function Game() {
   return (
     <main>
       <section>
-        {guessList.length > 0 && <GuessResults guessList={guessList} />}
+        <GuessResults guessList={guessList} />
 
         <Form guessList={guessList} setGuess={setGuess} />
       </section>
