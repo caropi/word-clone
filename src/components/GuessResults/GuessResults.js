@@ -3,10 +3,6 @@ import Guess from '../Guess/Guess';
 import { range } from '../../utils';
 import { NUM_OF_CHARACTERS_ALLOWED } from '../../constants';
 
-/**
- * Render blank grid range
- */
-
 function GuessResults({ guessList }) {
   const rangeArray = range(NUM_OF_CHARACTERS_ALLOWED);
   const blankGuess = rangeArray.map((item) => '');

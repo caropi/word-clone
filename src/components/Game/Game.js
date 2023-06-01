@@ -12,13 +12,13 @@ console.info({ answer });
 
 function Game() {
   const [guessList, setGuess] = React.useState([]);
-  console.log({ guessList });
+
   return (
     <main>
       <section>
         <GuessResults guessList={guessList} />
 
-        <Form guessList={guessList} setGuess={setGuess} />
+        <Form guessList={guessList} setGuess={setGuess} answer={answer} />
       </section>
     </main>
   );
