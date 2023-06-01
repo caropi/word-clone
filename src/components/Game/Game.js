@@ -5,11 +5,6 @@ import { WORDS } from '../../data';
 import Form from '../Form/Form';
 import GuessResults from '../GuessResults/GuessResults';
 
-/**
- * When the user submits their guess, that value should be rendered within this new component.
- * There should be no key warnings in the console!
- */
-
 // Pick a random word on every pageload.
 const answer = sample(WORDS);
 // To make debugging easier, we'll log the solution in the console.
@@ -21,7 +16,7 @@ function Game() {
   return (
     <main>
       <section>
-        {guessList.length > 0 && <GuessResults guessList={guessList} />}
+        <GuessResults guessList={guessList} />
 
         <Form guessList={guessList} setGuess={setGuess} />
       </section>
