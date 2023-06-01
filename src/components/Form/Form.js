@@ -1,7 +1,8 @@
 import React from 'react';
 import { NUM_OF_CHARACTERS_ALLOWED, NUM_OF_GUESSES_ALLOWED } from '../../constants';
+import { checkGuess } from '../../game-helpers';
 
-function Form({ guessList, setGuess }) {
+function Form({ guessList, setGuess, answer }) {
   const [inputText, setInputText] = React.useState('');
   const handleGuess = (event) => {
     event.preventDefault();
@@ -10,7 +11,7 @@ function Form({ guessList, setGuess }) {
       return;
     }
 
-    setGuess([...guessList, { guess: inputText.toUpperCase().split(''), id: Math.random() }]);
+    setGuess([...guessList, { guess: checkGuess(inputText, answer), id: Math.random() }]);
     setInputText('');
   };
 
