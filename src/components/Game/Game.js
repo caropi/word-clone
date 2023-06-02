@@ -4,6 +4,7 @@ import { sample } from '../../utils';
 import { WORDS } from '../../data';
 import Form from '../Form/Form';
 import GuessResults from '../GuessResults/GuessResults';
+import Banner from '../Banner/Banner';
 
 // Pick a random word on every pageload.
 const answer = sample(WORDS);
@@ -19,6 +20,7 @@ function Game() {
         <GuessResults guessList={guessList} />
 
         <Form guessList={guessList} setGuess={setGuess} answer={answer} />
+        {guessList.length === 5 && <Banner guessList={guessList} answer={answer} />}
       </section>
     </main>
   );
