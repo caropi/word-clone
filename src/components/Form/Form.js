@@ -26,9 +26,9 @@ function Form({ guessList, setGuess, answer }) {
         title="Answer must be 5 characters long"
         value={inputText}
         onChange={(event) => setInputText(event.target.value)}
+        disabled={guessList.length === 5 ? true : false}
       />
-      {guessList.length === NUM_OF_GUESSES_ALLOWED &&
-        "You've reached the maximum number of guesses"}
+      {guessList.length === 5 && "You've reached the maximum number of guesses"}
     </form>
   );
 }
